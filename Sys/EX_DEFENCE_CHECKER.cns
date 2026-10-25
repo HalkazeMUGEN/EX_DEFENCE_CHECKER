@@ -1,0 +1,419 @@
+[Data]
+life=1000
+power=3000
+attack=100
+defence=100
+fall.defence_up=100
+liedown.time=0
+airjuggle=15
+sparkno=-1
+guard.sparkno=-1
+KO.echo=0
+volume=255
+IntPersistIndex=60
+FloatPersistIndex=40
+[Size]
+xscale=1
+yscale=1
+ground.back=1
+ground.front=1
+air.back=1
+air.front=1
+height=1
+attack.dist=1
+proj.attack.dist=1
+proj.doscale=0
+head.pos=0,0
+mid.pos=0,0
+shadowoffset=0
+draw.offset=0,0
+[Velocity]
+walk.fwd=0
+walk.back=0
+run.fwd=0,0
+run.back=0,0
+jump.neu=0,0
+jump.back=0
+jump.fwd=0
+runjump.back=0,0
+runjump.fwd=0,0
+airjump.neu=0,0
+airjump.back=0
+airjump.fwd=0
+[Movement]
+airjump.num=0
+airjump.height=0
+yaccel=1
+stand.friction=1
+crouch.friction=1
+[Statedef 0]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 10]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 11]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 12]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 20]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 40]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 45]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 50]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 51]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 52]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 100]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 101]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 105]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 106]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 120]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 130]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 131]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 132]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 140]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 141]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 150]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 151]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 152]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 153]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 154]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 155]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 170]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 175]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 180]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 190]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5000]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5001]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5010]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5011]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5020]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5030]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5035]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5040]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5050]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5070]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5071]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5080]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5081]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5100]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5101]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5110]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5120]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5150]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5200]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5201]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5210]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5500]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1
+[Statedef 5900]
+[State ]
+type=SelfState
+trigger1=1
+value=9999
+persistent=256
+ignorehitpause=1

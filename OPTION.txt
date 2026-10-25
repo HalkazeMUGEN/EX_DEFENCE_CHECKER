@@ -1,0 +1,175 @@
+											[StateDef 9998]
+											[State ]
+											type=Null
+;オプション設定１
+;試合開始から何Ｆ後から隔離攻撃を開始するか
+;０の場合は読込直後に行います。
+;最大で9999まで設定可能
+trigger1=var(59):=( 300 )
+											trigger1=var(59):=ifelse((var(59)=[0,9999]),var(59),ifelse(var(59)>0,9999,0))
+											ignorehitpause=1
+											[State ]
+											type=VarSet
+											trigger1=1
+											sysvar(0)=var(59)
+											ignorehitpause=1
+											[State ]
+											type=VarSet
+											trigger1=palno=3
+;オプション設定２
+;３Ｐ切り替えスイッチ
+;１にするとヘルパー全消去も行うようになります。
+trigger1 = 0
+											sysvar(3)=1
+											ignorehitpause=1
+											[State ]
+											type=VarSet
+											trigger1=palno=4
+;オプション設定３
+;４Ｐ切り替えスイッチ
+;１にするとヘルパーの時止め耐性も解除するようになります。
+trigger1 = 0
+											sysvar(3)=1
+											ignorehitpause=1
+											[State ]
+											type=VarSet
+											trigger1=palno=5
+;オプション設定４
+;５Ｐ切り替えスイッチ
+;１にすると時止め解除ヘルパーもＮｏＫＯ解除するようになります。
+trigger1 = 0
+											sysvar(3)=1
+											ignorehitpause=1
+											[State ]
+											type=VarSet
+											trigger1=palno=6
+;オプション設定５
+;６Ｐ切り替えスイッチ１
+;１にするとヘルパーの利用ステートも変更するようになります。
+trigger1 = 0
+											sysvar(3)=1
+											ignorehitpause=1
+											[State ]
+											type=VarSet
+											trigger1=palno=6
+;オプション設定６
+;６Ｐ切り替えスイッチ２
+;１にすると自分のステートを読んでいる相手ヘルパーを消去するようになります。
+trigger1 = 0
+											sysfvar(1)=1
+											ignorehitpause=1
+											[State ]
+											type=VarSet
+											trigger1=palno=7
+;オプション設定７
+;７Ｐ切り替えスイッチ１
+;１にするとヘルパーの行動フラグも変更するようになります。
+trigger1 = 0
+											sysvar(3)=1
+											ignorehitpause=1
+											[State ]
+											type=VarSet
+											trigger1=palno=7
+;オプション設定８
+;７Ｐ切り替えスイッチ２
+;１にすると行動フラグを弄る際にＭｏｖｅＴｙｐｅも書き換えてＩに変更します。
+trigger1 = 0
+											sysfvar(2)=1
+											ignorehitpause=1
+											[State ]
+											type=VarSet
+											trigger1=palno=8
+;オプション設定９
+;８Ｐ切り替えスイッチ
+;１にするとヘルパーのPersistentも変更するようになります。
+trigger1 = 0
+											sysvar(3)=1
+											ignorehitpause=1
+											[State ]
+											type=VarSet
+											triggerall=palno=10
+;オプション設定１０
+;１０Ｐ切り替えスイッチ
+;試合の終わらせ方を変更できます。
+;1:自殺 / 2:%nF5 / 3:ラウンドタイマー変更 / 4:ラウンドステート変更 / 5:強制決着
+;それ以外を指定すると 自殺 に設定されます。
+trigger1=var(59):=( 1 )
+											trigger1=0
+											trigger2=var(59):=ifelse((var(59)=[1,5]),var(59),1)
+											sysvar(3)=var(59)
+											ignorehitpause=1
+											[State ]
+											type=VarSet
+											triggerall=palno=11
+;オプション設定１１
+;１１Ｐ切り替えスイッチ
+;試合の終わらせ方を変更できます。
+;1:自殺 / 2:%nF5 / 3:ラウンドタイマー変更 / 4:ラウンドステート変更 / 5:強制決着
+;それ以外を指定すると 自殺 に設定されます。
+trigger1=var(59):=( 1 )
+											trigger1=0
+											trigger2=var(59):=ifelse((var(59)=[1,5]),var(59),1)
+											sysvar(3)=var(59)
+											ignorehitpause=1
+											[State ]
+											type=VarSet
+											trigger1=var(59):=0||1
+											trigger1=palno=[1,11]
+;オプション設定１２
+;１２Ｐカスタマイズ項目（１で実行する / ０で実行しない）
+trigger2=1||var(59):=(var(59)|1*      ( 0 ))	;直死
+trigger2=1||var(59):=(var(59)|2*      ( 0 ))	;全ヘルパー消去
+trigger2=1||var(59):=(var(59)|4*      ( 0 ))	;プレイヤー消去 + 修復
+trigger2=1||var(59):=(var(59)|8*      ( 0 ))	;敵本体時止め耐性解除
+trigger2=1||var(59):=(var(59)|16*     ( 0 ))	;敵ヘルパー時止め耐性解除
+trigger2=1||var(59):=(var(59)|32*     ( 0 ))	;本体からのNoKO解除
+trigger2=1||var(59):=(var(59)|64*     ( 0 ))	;ヘルパーからのNoKO解除
+trigger2=1||var(59):=(var(59)|128*    ( 0 ))	;敵本体利用ステート変更
+trigger2=1||var(59):=(var(59)|256*    ( 0 ))	;敵ヘルパー利用ステート変更
+trigger2=1||var(59):=(var(59)|512*    ( 0 ))	;敵本体行動フラグ弄り
+trigger2=1||var(59):=(var(59)|1024*   ( 0 ))	;敵ヘルパー行動フラグ弄り
+trigger2=1||var(59):=(var(59)|2048*   ( 0 ))	;敵本体Persistent弄り
+trigger2=1||var(59):=(var(59)|4096*   ( 0 ))	;敵ヘルパーPersistent弄り
+trigger2=1||var(59):=(var(59)|8192*   ( 0 ))	;ESCキー押下フラグオン
+trigger2=1||var(59):=(var(59)|16384*  ( 0 ))	;最大ライフ弄り
+trigger2=1||var(59):=(var(59)|32768*  ( 0 ))	;勝利フラグ弄り
+trigger2=1||var(59):=(var(59)|65536*  ( 0 ))	;勝利数弄り
+trigger2=1||var(59):=(var(59)|131072* ( 0 ))	;自殺 + 蘇生
+trigger2=1||var(59):=(var(59)|262144* ( 0 ))	;%nF5
+trigger2=1||var(59):=(var(59)|524288* ( 0 ))	;ラウンドタイマー変更
+trigger2=1||var(59):=(var(59)|1048576*( 0 ))	;ラウンドステート変更
+trigger2=1||var(59):=(var(59)|2097152*( 0 ))	;強制決着
+											sysvar(2)=var(59)
+											ignorehitpause=1
+											[State ]
+											type=VarSet
+											trigger1=palno!=6
+;オプション設定１３
+;１２Ｐ切り替えスイッチ１
+;１にすると自分のステートを読んでいる相手ヘルパーを消去するようになります。
+trigger1 = 0
+											sysfvar(1)=1
+											ignorehitpause=1
+											[State ]
+											type=VarSet
+											trigger1=palno!=7
+;オプション設定１４
+;１２Ｐ切り替えスイッチ２
+;１にすると行動フラグを弄る際にＭｏｖｅＴｙｐｅも書き換えてＩに変更します。
+trigger1 = 0
+											sysfvar(2)=1
+											ignorehitpause=1
+
+
+;オプション設定項目は以上です。
+											[State ]
+											type=VarSet
+											trigger1=1
+											sysfvar(0)=9998
+											ignorehitpause=1
+											[State ]
+											type=SelfState
+											trigger1=1
+											value=9999
+											persistent=256
+											ignorehitpause=1
